@@ -13,13 +13,13 @@
 其中bh(tree)=bh(root)
 引理:N个节点的红黑树的高度最多是2ln(N+1)
 证明：
-- $ sizeof(x) \geq 2^{bh(x)} -1 $ 用递归来证明
+- $sizeof(x) \geq 2^{bh(x)} -1$ 用递归来证明
 x=0时成立，
-h(x)=k时成立，有$ sizeof(x) \geq 2^{bh(x)} -1 $
+h(x)=k时成立，有$sizeof(x) \geq 2^{bh(x)} -1$
 h(x)=k+1时，bh(child)=bh(x)/bh(x)-1
-$ sizeof(child) \geq 2^{bh(child)} -1 \geq 2^{bh(x)-1} -1 $
-$ sizeof(x)=1+sizeof(left)+sizeof(right) \geq 2^{bh(x)} -1 $
-- $ bh(Tree) \geq h(Tree)/2 $
+$sizeof(child) \geq 2^{bh(child)} -1 \geq 2^{bh(x)-1} -1$
+$sizeof(x)=1+sizeof(left)+sizeof(right) \geq 2^{bh(x)} -1$
+- $bh(Tree) \geq h(Tree)/2$
 4. 操作
 - Insert：只要bh(root)不变，我们就不需要再进行下面的操作了（可以用循环来做）
 每次插入的时候都是红的

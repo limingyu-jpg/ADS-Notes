@@ -6,7 +6,7 @@
 对于好坏的描述：采用Average search time
 > height balanced，balance factorBF定义
 height balanced：左右字数也height balanced，并且左右子树高度差不超过1
-$ BF(node) = h_L-h_R / h_R-h_L$
+$BF(node) = h_L-h_R / h_R-h_L$
 
 3. 
 判断怎么转的时候只看三层（是从出现问题的那个节点开始往下算的）
@@ -48,7 +48,7 @@ Zig-zag(原来的三个节点方向不一样，之字形，方向相反，转的
 ## Amortized Analysis 
 > 
 摊还时间：连续n次总的真实时间\n的结果
-$ worst-case  bound \geq amortized bound \geq average-case bound $
+$worst-case  bound \geq amortized bound \geq average-case bound$
 
 方法：
 
@@ -75,8 +75,8 @@ $ worst-case  bound \geq amortized bound \geq average-case bound $
 
 推导：
 ![alt text](image-15.png)
-Zig:因为$ R_2(X)-R_1(X) \leq 0 $，所以可以直接变成$ \leq $消掉
-Zig-zag:$ R_2(X)-R_1(G) $正好为0，观察得到$ R_1(P) \geq R_1(X) $,把$ R_1(P) $放缩成$ R_1(X) $。符号是$ \leq $，成立。操作后P和G是X的两个子树，![alt text](image-17.png)。最后得到结果
+Zig:因为$R_2(X)-R_1(X) \leq 0$，所以可以直接变成$\leq$消掉
+Zig-zag:$R_2(X)-R_1(G)$正好为0，观察得到$R_1(P) \geq R_1(X)$,把$R_1(P)$放缩成$R_1(X)$。符号是$\leq$，成立。操作后P和G是X的两个子树，![alt text](image-17.png)。最后得到结果
 S和R之间变换的式子的证明：
 ![alt text](image-20.png)
 

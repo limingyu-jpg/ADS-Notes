@@ -14,7 +14,7 @@ Time of inserting N numbers into a binary heap : O(N)
 
 ![alt text](image-121.png)
 ![alt text](image-122.png)
-观察结果：$ B_k $包括一个有K个孩子的根，k个子节点是 $ B_0 $到$ B_{k-1} $，节点的数量是$ 2^k $，在depth为d的节点数量是二项式系数$\begin{bmatrix} k \\ d \end{bmatrix}$
+观察结果：$B_k$包括一个有K个孩子的根，k个子节点是 $B_0$到$B_{k-1}$，节点的数量是$2^k$，在depth为d的节点数量是二项式系数$\begin{bmatrix} k \\ d \end{bmatrix}$
 
 ![alt text](image-123.png)
 任意大小的优先队列都可以被唯一表示为一个二项树的集合
@@ -39,13 +39,13 @@ PS:但是如果我们可以用额外的空间来存最小值并一直更新的�
 观察：
 ![alt text](image-126.png)
 ![alt text](image-127.png)
-$ B_0 $空，就是没数，那么直接加进去，一下。如果$ B_1 $空，就是两个位置只有根有，加到一个空的$ B_0 $里面再合并，两下……
+$B_0$空，就是没数，那么直接加进去，一下。如果$B_1$空，就是两个位置只有根有，加到一个空的$B_0$里面再合并，两下……
 
 
 ### DeleteMin
-1. FindMin in $ B_k $          O(logN)
-2. Remove $ B_k $ from H       O(1)
-3. Remove root from $ B_k $    O(logN) 其实就是k
+1. FindMin in $B_k$          O(logN)
+2. Remove $B_k$ from H       O(1)
+3. Remove root from $B_k$    O(logN) 其实就是k
 4. Merge(H',H'')               O(logN)
 
 ![alt text](image-128.png)
@@ -61,7 +61,7 @@ Binomial queue = array of binomial trees
 合并操作：完整
 ![alt text](image-135.png)
 ```c
-for(i=0,j=1;j<=H1->CurrentSize;i++,j*=2)//此时，可以保证i是从0到logN，并且j是此时$ B_i $的节点数
+for(i=0,j=1;j<=H1->CurrentSize;i++,j*=2)//此时，可以保证i是从0到logN，并且j是此时$B_i$的节点数
 ```
 ![alt text](image-136.png)
 
