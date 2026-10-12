@@ -24,13 +24,15 @@
 ```
 ads课程/
 ├── README.md          # 本文件（导航）
-├── 笔记/              # 5 篇 Markdown 笔记 + 配套截图（png/jpg）
+├── 笔记/              # 5 篇 Markdown 笔记
+│   └── images/        # 全部图片（png/jpg）集中存放，避免刷屏
 └── 代码/             # AVL.c、hw.c
 ```
 
 ## 在 GitHub 上查看
 
-- 笔记里的图片与对应 Markdown 放在同一目录，GitHub 可直接渲染，**点击上方表格中的笔记链接**即可阅读。
+- 笔记里的图片统一放在 `笔记/images/`，Markdown 用相对路径 `images/xxx.png` 引用，GitHub 可直接渲染，**点击上方表格中的笔记链接**即可阅读。
+- `笔记/` 目录只放 5 篇 Markdown，左侧文件树不会被大量图片文件刷屏。
 - 公式以 LaTeX 书写（`$...$`），GitHub Markdown 原生支持数学公式渲染。
 - 想全局检索某关键词，可使用 GitHub 仓库顶部的 **Search** 或按 `t` 打开文件查找面板。
 
