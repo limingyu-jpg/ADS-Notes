@@ -1,0 +1,59 @@
+site_name: ADS 课程笔记
+site_url: https://limingyu-jpg.github.io/ADS-Notes/
+repo_name: limingyu-jpg/ADS-Notes
+repo_url: https://github.com/limingyu-jpg/ADS-Notes
+docs_dir: .build/docs
+site_dir: .build/site
+theme:
+  name: material
+  language: zh
+  font: false
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换浅色模式
+  features:
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+nav:
+  - 首页: README.md
+  - "搜索 / AVL / Splay": "笔记/搜索AVL_Splay笔记.md"
+  - "红黑树 / B+ 树": "笔记/红黑树B+树.md"
+  - "左式堆 / 斜堆": "笔记/Heaps.md"
+  - "二项队列": "笔记/Binomial_Queue.md"
+  - "倒排文件索引": "笔记/Inverted_File_Index.md"
+plugins:
+  - search:
+      lang: [en, zh]
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - sane_lists
+  - toc:
+      permalink: true
+      toc_depth: 2-4
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
