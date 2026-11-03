@@ -42,6 +42,7 @@ Time of inserting N numbers into a binary heap : O(N)
 已知根节点是每个树里面最小的，直接将每个树的根拿出来进行比较找最小的
 
 - 时间：O(logN)
+
 > [!NOTE]
 > 但是如果我们可以用额外的空间来存最小值并一直更新的话，那么这一步操作就是O(1)，但是在删除的时候也需要调整，时间依旧是O(logN)。这样的操作就没必要了。
 
@@ -121,3 +122,32 @@ N次总时间是O(N)，二进制加法进位的次数是有限的，摊还时间
 ![Binomial_Queue配图（image-140）](../assets/images/image-140.png)
 
 ![Binomial_Queue配图（image-141）](../assets/images/image-141.png)
+
+如果整个操作是N个点，那么如果想要整体时间上限是O(logN)的话，一定要是数组从大到小存储
+
+## Binomial Queue 和 Leftist Heap 的区别
+
+1. binomial queue哪里有优势，什么时候用它
+2. 证明哪里好
+
+### 一、优势
+
+1. 在Buildheap过程中，如果数组是确定的，Binomial Queue和Leftist Heap的Buildheap时间都是O(N)，此时Leftist Heap的Buildheap的操作是两两合并的操作。如果数组是动态的，我们在操作的过程中只能单个插入，则Binomial Queue的Buildheap时间是O(N)，Leftist Heap的Buildheap时间是O(NlogN)
+2. Leftist Heap的Buildheap采用两两合并的操作时，总时间是4N级的。Binomial Queue的Buildheap时间是2N级的。
+3. Binomial Queue的结构相比于Leftist Heap更规整
+
+### 二、证明
+
+优势2的证明：
+
+![Binomial_Queue配图（b95546a9097b3a4120441bf6bfbbd071）](../assets/images/b95546a9097b3a4120441bf6bfbbd071.jpg)
+
+Binomial Queue的证明在视频中说明，时间上界是2N。
+
+### 三、工程中的选择
+
+根据操作内容来进行选择，选择操作最多的那个操作进行优化。
+如果想要频繁的合并可以选择Leftist Heap，如果想要高频的插入，可以选择Binomial Queue
+
+deletemin的操作进行之后就会出现问题
+按照B+树的操作得到logN

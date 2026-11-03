@@ -34,6 +34,9 @@ nav:
   - "左式堆 / 斜堆": "笔记/Heaps.md"
   - "二项队列": "笔记/Binomial_Queue.md"
   - "倒排文件索引": "笔记/Inverted_File_Index.md"
+  - "分治算法": "笔记/Divide_and_Conquer.md"
+  - "动态规划": "笔记/DP.md"
+  - "算法与回溯": "笔记/NP.md"
 plugins:
   - search:
       lang: [en, zh]

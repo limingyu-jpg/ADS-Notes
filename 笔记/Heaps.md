@@ -68,6 +68,7 @@ A: 可以把所有的内容复制到两个数组里面进行合并，复制时�
 ![Heaps配图（image-100）](../assets/images/image-100.png)
 
 Merge处理最小的情况，注意更新NPL
+
 > [!NOTE]
 > 如果不对 Npl 进行调整，仍然是一个合法的最小堆，但是不再左倾，Swap 判断随之失真，右路径失去对数上界。
 
@@ -158,7 +159,8 @@ $H_i:l_i+h_i$这个表示的是右路径的长度
 ![Heaps配图（image-114）](../assets/images/image-114.png)
 
 3. 与左倾堆相比，斜堆在空间上总是更高效(对的，因为斜堆不需要存npl，少存一个东西会好一点)
-### 题目 4
+
+### 条目 4
 
 ![Heaps配图（image-116）](../assets/images/image-116.png)
 
@@ -166,7 +168,7 @@ $H_i:l_i+h_i$这个表示的是右路径的长度
 
 ![Heaps配图（abde6267d0ddee0626434a78d45a5b6b）](../assets/images/abde6267d0ddee0626434a78d45a5b6b.jpg)
 
-### 题目 5
+### 条目 5
 
 ![Heaps配图（image-118）](../assets/images/image-118.png)
 
@@ -182,3 +184,23 @@ $H_i:l_i+h_i$这个表示的是右路径的长度
 2. 对剩下的节点进行调整，使其变成Leftist Heap.由于交换的时候不改变parent的Npl，变化的时候变化最多是logN次，所以调整的时间是O(logN)
 3. 将两个拆分出的Leftist Heap合并，合并的时间是O(logN)
 这样就实现了DecreaseKey operation，时间是O(logN)
+
+## 题目
+
+### 条目 1
+
+![Heaps配图（image）](../assets/images/image-f16ac1253c.png)
+
+F,时间是O(logN)
+
+### 条目 2
+
+![Heaps配图（image-1）](../assets/images/image-1-f85f5871f3.png)
+
+F,时间是O(logN)
+
+### 条目 3
+
+![Heaps配图（image-2）](../assets/images/image-2-6e772e0c81.png)
+
+F，左倾堆为了维持右路径极短，大量的节点在左边，所以它实际上不平衡，偏向左侧。但是斜堆的话可能左右完全平衡，例如按顺序插入& 1到2^k-1 &，这个正好是一棵完美二叉树，但是左倾堆还是左边比较多

@@ -14,11 +14,21 @@
 | [二项队列](笔记/Binomial_Queue.md) | Binomial Queue | 一种优先队列，二项树结构、合并效率分析 |
 | [倒排文件索引](笔记/Inverted_File_Index.md) | Inverted File Index | 搜索引擎核心技术：词项-文档矩阵 → 倒排索引 |
 
+## 课程资料
+
+- [Project 要求（Typst 源文件）](project要求.typ)
+
 ## 代码
 
 - [代码/AVL.c](代码/AVL.c) — AVL 树实现
 - [代码/hw.c](代码/hw.c) — 课程作业代码
 
+
+## 新增课程内容
+
+- [分治算法](笔记/Divide_and_Conquer.md) — 最近点对、递推式、主定理与练习
+- [动态规划](笔记/DP.md) — 矩阵连乘、最优查找树、最短路与状态设计
+- [算法与回溯](笔记/NP.md) — 八皇后、收费公路重建、Minimax 和剪枝
 
 ## 阅读与排版
 

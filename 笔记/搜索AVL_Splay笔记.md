@@ -9,6 +9,7 @@
 ### 2. 平衡条件
 
 对于好坏的描述：采用Average search time
+
 > [!NOTE]
 > height balanced，balance factor BF 定义
 >
@@ -71,6 +72,7 @@
 让选中的节点变为根节点
 
 ![搜索AVL_Splay笔记配图（image-4）](../assets/images/image-4.png)
+
 Zig-zag(原来的三个节点方向不一样，之字形，方向相反，转的方向相反)和zig-zig(原来的三个节点方向一样，都向左或向右，一字形，方向相同，转的方向相同)
 
 ### 4. 删除操作
@@ -93,6 +95,7 @@ $worst-case  bound \geq amortized bound \geq average-case bound$
 ![搜索AVL_Splay笔记配图（image-6）](../assets/images/image-6.png)
 
 最坏是2n-1，平均是O(1)
+
 ### Accounting method
 
 需要去猜平均值进行摊还（类似于在银行存钱）
@@ -129,6 +132,7 @@ Zig:因为$R_2(X)-R_1(X) \leq 0$，所以可以直接变成$\leq$消掉
 Zig-zag:$R_2(X)-R_1(G)$正好为0，观察得到$R_1(P) \geq R_1(X)$,把$R_1(P)$放缩成$R_1(X)$。符号是$\leq$，成立。操作后P和G是X的两个子树，
 
 ![搜索AVL_Splay笔记配图（image-17）](../assets/images/image-17.png)。最后得到结果
+
 S和R之间变换的式子的证明：
 
 ![搜索AVL_Splay笔记配图（image-20）](../assets/images/image-20.png)

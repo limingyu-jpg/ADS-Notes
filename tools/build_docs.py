@@ -96,6 +96,8 @@ def stage():
         src = ROOT / directory
         if src.is_dir():
             shutil.copytree(src, DOCS / directory, ignore=shutil.ignore_patterns('image-manifest.json'))
+    for attachment in ROOT.glob('*.typ'):
+        shutil.copy2(attachment, DOCS / attachment.name)
     if (ROOT / 'LICENSE').exists():
         shutil.copy2(ROOT / 'LICENSE', DOCS / 'LICENSE')
 
